@@ -74,6 +74,7 @@ class FacebookPostsScraper:
             raise Exception("Couldn't load the Login Page")
 
         # Here we need to extract this tokens from the Login Page
+        print(soup)
         lsd = soup.find("input", {"name": "lsd"}).get("value")
         jazoest = soup.find("input", {"name": "jazoest"}).get("value")
         m_ts = soup.find("input", {"name": "m_ts"}).get("value")
